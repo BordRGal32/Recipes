@@ -1,0 +1,23 @@
+<h1> <%= @recipe.name %> </h1>
+
+<h2> Ingredients: </h2>
+  <p class="ingredients"><%= @recipe.ingredients %></p>
+ <h2> Directions: </h2>
+  <p class="directions"><%= @recipe.directions %></p>
+
+<h3>Tags</h3>
+<ul>
+  <% @recipe.tags.each do |tag| %>
+    <li><%= tag.name %></li>
+  <% end %>
+</ul>
+
+<h4>Add a Review to this Recipe</h4>
+<button><a href='/recipes/<%=@recipe.id%>/ratings/new'>Add a Review</a>
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+<a href="/recipes">Recipe Index</a> | <a href="/recipes/<%=@recipe.id%>/edit">Edit this Recipe</a> | <a href="/recipes/<%= @recipe.id %>"
+      data-confirm="Really really?"
+      data-method="delete"
+      rel="nofollow">Delete this Recipe</a>
+</nav>

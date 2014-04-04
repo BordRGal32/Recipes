@@ -1,0 +1,11 @@
+<h1>Grandmommy's Recipe Database</h1>
+
+<ul>
+  <% @tags.each do |tag| %>
+    <li><a href = "tags/<%= tag.id %>"><%= tag.name %></a></li>
+  <% end %>
+</ul>
+
+<button id="create"><a href="/tags/new">Add a New Tag</a></button>
+<button id="recipe_index"><a href = "/recipes">Recipe Index</a></button>
+

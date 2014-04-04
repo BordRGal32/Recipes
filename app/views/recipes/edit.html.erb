@@ -1,0 +1,25 @@
+<h1> Edit this Recipe </h1>
+
+<h3> <%= @recipe.name %> </h3>
+
+ <%= render('layouts/errors', :object => @recipe) %>
+
+<form action="/recipes/<%=@recipe.id%>/edit" method= "post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render('form') %>
+  <button>Edit Recipe</button>
+</form><br>
+
+<div id="delete_tag">
+  <h4>Click on a tag to delete it from the recipe</h4>
+    <ul>
+      <%@recipe.tags.each do |tag| %>
+        <li><a href="/recipes/<%=@recipe.id%>/<%=tag.id%>"
+          data-confrim="Are You Sure You Want to Delete This Tag"
+          data-method="delete"
+          rel="nofollow"><%=tag.name%></a></li>
+      <% end %>
+    </ul>
+</div>
+
+

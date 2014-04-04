@@ -1,0 +1,23 @@
+<div id="recipe_name">
+  <input id="recipe_name" name="recipe[name]" type="text" value="<%= @recipe.name %>" placeholder="Recipe Name"><br>
+<div/>
+
+<div id="recipe_ingredient">
+  <textarea id="recipe_ingredients" rows='5' cols='75' name="recipe[ingredients]" type="text" placeholder="Ingredients" placeholder="Enter Ingredients"><%= @recipe.ingredients %></textarea>
+</div>
+
+<div id="recipe_directions">
+<textarea id="recipe_directions" rows='10' cols='75' name="recipe[directions]" type="text" placeholder="Enter Directions"><%= @recipe.directions %></textarea>
+</div>
+
+<div id="recipe_tags">
+  <p>Add a Tag</p>
+<select name="tags" id="drop_down_tags">
+  <option value="">No Tag</option>
+    <% Tag.all.each do |tag| %>
+    <option value="<%= tag.id %>"><%= tag.name %></option>
+    <% end %>
+</select>
+</div>
+
+

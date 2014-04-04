@@ -1,0 +1,114 @@
+body {
+  padding-left: 25px;
+}
+
+#home {
+  font-family: 'Shadows Into Light', cursive;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+  border: solid 2px #8A0041;
+  background-color: #EA3A8D;
+}
+a {
+  font-weight: bold;
+  font-family: 'The Girl Next Door', cursive;
+  color: black;
+}
+
+ul {
+  padding: 5px;
+  list-style-type: none;
+}
+
+.recipe_list {
+  clear: both;
+  margin-top: 20px;
+  max-width: 300px;
+  font-weight: 100;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+#create {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #D50065;
+}
+
+#tag_universe {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #74217D;
+}
+
+#recipe_index {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: #62016D;
+}
+#recipe_name {
+  clear: both;
+  margin: 15px;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+
+}
+#recipe_ingredients {
+  clear: both;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+}
+
+#recipe_directions {
+  clear: both;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+}
+#recipe_tags{
+  clear: both;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+}
+#delete_tag{
+  clear: both;
+  border-radius: 10px;
+  max-width: 800px;
+  float: left;
+  padding: 10px;
+}
+h1 {
+  font-family: 'The Girl Next Door', cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+h3 {
+   font-family: 'The Girl Next Door', cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+  padding-top: 10px;
+}
+
+p {
+  font-family: 'Delius', cursive;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav {
+  padding: 15px;
+}

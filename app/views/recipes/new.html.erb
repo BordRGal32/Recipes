@@ -1,0 +1,11 @@
+
+<h2 id ="home"> Add a New Recipe to Grandmommmy's Recipe Database</h2>
+
+<form action="/recipes" method= "post">
+
+ <%= render('layouts/errors', :object => @recipe) %>
+
+  <%= render('form') %>
+
+  <button>Create New Recipe</button>
+</form>

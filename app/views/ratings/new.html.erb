@@ -1,0 +1,14 @@
+<%= render('layouts/errors', :object => @rating) %>
+
+
+<form action="/ratings" method= "post">
+  <select name='rating[stars]'>
+    <% (1..5).to_a.each do |num| %>
+      <option value="<%= @rating.stars %>"><%=num%></option>
+    <%end%>
+  </select>
+  <input id="rating_recipe_id" name="rating[recipe_id]" value="<%=@recipe.id%>" type="hidden">
+  <textarea rows='10' cols='75' name="rating[review]" placeholder="Enter Your Review"><%=@rating.review%></textarea>
+
+  <button>Add Review </button>
+</form>

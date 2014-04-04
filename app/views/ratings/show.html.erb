@@ -1,0 +1,15 @@
+<h1> <%= @tag.name %> </h1>
+
+<h2>All Tagged Recipes:</h2>
+<ul>
+  <%@tag.recipes.each do |recipe|%>
+   <li><a href ="/recipe/<%=recipe.id%>" ><%= recipe.name %></a></li>
+  <%end%>
+</ul>
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+<a href="/tags">Tag Index</a> | <a href ="/recipes">Recipe Index</a> | <a href="/tags/<%=@tag.id%>/edit">Edit this Tag</a> | <a href="/tags/<%= @tag.id %>"
+      data-confirm="Really really?"
+      data-method="delete"
+      rel="nofollow">Delete this tag</a>
+</nav>
