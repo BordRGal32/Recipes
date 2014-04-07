@@ -19,9 +19,10 @@ RecipeBook::Application.routes.draw do
   match('tags/:id', {via: :delete, :to => 'tags#destroy'})
   match('recipes/:id/:tag_id', {via: :delete, :to => 'recipes#remove_tag'})
 
-  # match('reviews', {via: :get, :to => 'reviews#index'})
-  match('ratings', {via: :post, :to => 'ratings#create'})
+  match('recipes/:id/ratings', {via: :get, :to => 'ratings#index'})
+  match('recipes/:id/ratings', {via: :post, :to => 'ratings#create'})
   match('recipes/:id/ratings/new', {via: :get, :to => 'ratings#new'})
+  match('ratings/:id', {via: :get, :to => 'ratings#show'})
   # match('reviews/:id', {via: :get, :to => 'reviews#show'})
   # match('reviews/:id/edit', {via: :get, :to => 'reviews#edit'})
   # match('reviews/:id', {via: [:patch, :put], :to => 'reviews#update'})

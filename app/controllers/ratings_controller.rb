@@ -1,24 +1,26 @@
 class RatingsController < ApplicationController
-  # def index
-  #   @reviews = Review.all
-  #   render('index.html.erb')
-  # end
-  # def show
-  #   @review = Review.find(params[:id])
-  #   render('reviews/show.html.erb')
-  # end
+  def index
+    @recipe = Recipe.find(params[:id])
+    @rating = @recipe.ratings
+    render('index.html.erb')
+  end
+
+  def show
+    @ratings = Rating.find(params[:id])
+    redirect_to("/recipes/#{@ratings.recipe_id}/ratings")
+  end
 
   def new
     @recipe = Recipe.find(params[:id])
-    # params crash
     @rating = Rating.new
     render('/ratings/new.html.erb')
   end
 
   def create
-    @rating = Rating.new(params[:review])
+    @recipe = Recipe.find(params[:id])
+    @rating = Rating.new(params[:rating])
     if @rating.save
-      flash[:notice] = "#{@rating.name} was Saved"
+      flash[:notice] = "Your Review Was Saved"
       redirect_to("/")
     else
       render('new.html.erb')

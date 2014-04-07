@@ -1,11 +1,14 @@
-<h1>Grandmommy's Recipe Database</h1>
+<h1>Reviews for <%=@recipe.name%></h1>
 
 <ul>
-  <% @tags.each do |tag| %>
-    <li><a href = "tags/<%= tag.id %>"><%= tag.name %></a></li>
+  <% @rating.each do |rating| %>
+    <li>Stars: <%=rating.stars%>  <br>  Review: <%=rating.review %> <br> </li>
   <% end %>
-</ul>
+</ull>
 
-<button id="create"><a href="/tags/new">Add a New Tag</a></button>
-<button id="recipe_index"><a href = "/recipes">Recipe Index</a></button>
+<nav class="navbar navbar-fixed-top" role="navigation">
+    <a href="/recipes">Recipe Index</a> | <a href="/recipes/<%=@recipe.id%>">Return to Recipe</a>
+</nav>
+
+
 

@@ -14,10 +14,11 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(params[:recipe])
-    @tag = Tag.find(params[:tags])
-
-    @recipe.tags << @tag
+     @recipe = Recipe.new(params[:recipe])
+    if params[:tag] != nil
+      @tag = Tag.find(params[:tags])
+      @recipe.tags << @tag
+    end
     if @recipe.save
       flash[:notice] = "#{@recipe.name} was Saved to your Recipe Book"
       redirect_to("/recipes")

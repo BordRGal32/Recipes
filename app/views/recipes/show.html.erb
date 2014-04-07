@@ -12,11 +12,8 @@
   <% end %>
 </ul>
 
-<h4>Add a Review to this Recipe</h4>
-<button><a href='/recipes/<%=@recipe.id%>/ratings/new'>Add a Review</a>
-
 <nav class="navbar navbar-fixed-top" role="navigation">
-<a href="/recipes">Recipe Index</a> | <a href="/recipes/<%=@recipe.id%>/edit">Edit this Recipe</a> | <a href="/recipes/<%= @recipe.id %>"
+<a href="/recipes">Recipe Index</a> | <a href="/recipes/<%=@recipe.id%>/edit">Edit this Recipe</a> | <a href="/recipes/<%=@recipe.id%>/ratings">See Reviews For This Recipe</a> | <a href='/recipes/<%=@recipe.id%>/ratings/new'>Add a Review</a> | <a href="/recipes/<%= @recipe.id %>"
       data-confirm="Really really?"
       data-method="delete"
       rel="nofollow">Delete this Recipe</a>

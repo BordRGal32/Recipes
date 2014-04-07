@@ -14,7 +14,7 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new(params[:tag])
+    @tag = Tag.new(params[:tags])
     if @tag.save
       flash[:notice] = "#{@tag.name} was Saved to your tag list."
       redirect_to("/tags")
