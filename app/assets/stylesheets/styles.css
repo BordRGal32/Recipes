@@ -1,15 +1,17 @@
 body {
   padding-left: 25px;
+  background-image: url('images/stardust.png');
 }
 
 #home {
   font-family: 'Shadows Into Light', cursive;
-  border-radius: 10px;
-  max-width: 800px;
-  float: left;
+  margin-top: -25px;
+  margin-right: -75px;
+  margin-left: -75px;
+  margin-bottom: 75px;
   padding: 10px;
-  border: solid 2px #8A0041;
-  background-color: #EA3A8D;
+  border-bottom: solid 2px #8A0041;
+  text-align: center;
 }
 a {
   font-weight: bold;
